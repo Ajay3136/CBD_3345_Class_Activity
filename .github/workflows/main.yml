@@ -10,22 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Check out code
       uses: actions/checkout@v2
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: 14
-
-    - name: Install dependencies
-      run: npm install
-
     - name: Build code
-      run: npm run build
+      run: |
+        # Add your build commands here
 
     - name: Test code
-      run: npm test
+      run: |
+        # Add your test commands here
 
   deploy:
     runs-on: ubuntu-latest
@@ -34,5 +28,4 @@ jobs:
     steps:
     - name: Deploy to production
       run: |
-        # Replace this comment with your deployment commands
-        # Example: rsync -avz --exclude node_modules ./ user@your-server:/path/to/app
+        # Add deployment commands here
